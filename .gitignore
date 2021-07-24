@@ -23,7 +23,6 @@
 
 # locks
 *.lock*
-*-lock*
 
 # logs
 npm-debug.log*

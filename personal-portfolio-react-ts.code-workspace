@@ -13,6 +13,9 @@
     "files.trimTrailingWhitespace": true,
     "debug.javascript.codelens.npmScripts": "never",
     "typescript.enablePromptUseWorkspaceTsdk": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    }
   }
 }
