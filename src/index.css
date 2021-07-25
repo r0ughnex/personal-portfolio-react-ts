@@ -1,28 +1,2 @@
 @import-normalize;
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-body {
-  margin: 0;
-  color: #212121;
-  font-family: 'Roboto', sans-serif;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-}
-
-h1 {
-  color: inherit;
-  font-size: 34px;
-  font-weight: 700;
-  line-height: 40px;
-  margin-top: 0.375em;
-  margin-bottom: 0.375em;
-}
-
-p {
-  color: #616161;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 25px;
-  margin-top: 0.875em;
-  margin-bottom: 0.875em;
-}
+@import-sanitize;
