@@ -1,25 +1,68 @@
-import './App.css';
-
-import logo from './logo.svg';
+import styles from './App.module.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <main className={styles.App}>
+      <section className={styles.AppSectionLight}>
+        <h1>Who I have worked with.</h1>
+
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          I&apos;ve worked with a variety of clients, from smaller start-ups to
+          larger global&nbsp;organisations, to create brand identities,
+          websites, campaigns and&nbsp;much&nbsp;more.
         </p>
-        <a
-          target="_blank"
-          className="App-link"
-          href="https://reactjs.org"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      </section>
+
+      <section className={styles.AppSectionLight}>
+        <h1>Who I have worked with.</h1>
+
+        <p>
+          I&apos;ve worked with a variety of clients, from smaller start-ups to
+          larger global&nbsp;organisations, to create brand identities,
+          websites, campaigns and&nbsp;much&nbsp;more.
+        </p>
+      </section>
+
+      <section className={styles.AppSectionMedm}>
+        <h1>Who I have worked with.</h1>
+
+        <p>
+          I&apos;ve worked with a variety of clients, from smaller start-ups to
+          larger global&nbsp;organisations, to create brand identities,
+          websites, campaigns and&nbsp;much&nbsp;more.
+        </p>
+      </section>
+
+      <section className={styles.AppSectionMedm}>
+        <h1>Who I have worked with.</h1>
+
+        <p>
+          I&apos;ve worked with a variety of clients, from smaller start-ups to
+          larger global&nbsp;organisations, to create brand identities,
+          websites, campaigns and&nbsp;much&nbsp;more.
+        </p>
+      </section>
+
+      <section className={styles.AppSectionDark}>
+        <h1>Who I have worked with.</h1>
+
+        <p>
+          I&apos;ve worked with a variety of clients, from smaller start-ups to
+          larger global&nbsp;organisations, to create brand identities,
+          websites, campaigns and&nbsp;much&nbsp;more.
+        </p>
+      </section>
+
+      <section className={styles.AppSectionDark}>
+        <h1>Who I have worked with.</h1>
+
+        <p>
+          I&apos;ve worked with a variety of clients, from smaller start-ups to
+          larger global&nbsp;organisations, to create brand identities,
+          websites, campaigns and&nbsp;much&nbsp;more.
+        </p>
+      </section>
+    </main>
   );
 }
 
