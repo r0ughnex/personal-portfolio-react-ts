@@ -13,10 +13,8 @@ export interface PageProps {
 }
 
 function Page({ children, className, hasScroll, type }: PageProps) {
-  const pageClassName = getPageClassName(type, hasScroll);
-
   return (
-    <div className={classNames(pageClassName, className)}>
+    <div className={classNames(getPageClassName(type, hasScroll), className)}>
       <div className={styles.PageContent}>{children}</div>
     </div>
   );
