@@ -1,0 +1,20 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+$container_width_max: 1400px;
+$container_width_max_lg: 1680px;
+$container_width_max_xlg: 1920px;
+
+.Container {
+  max-width: $container_width_max;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include desktop-lg-up {
+    max-width: $container_width_max_lg;
+  }
+
+  @include desktop-xlg-up {
+    max-width: $container_width_max_xlg;
+  }
+}
