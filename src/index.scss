@@ -4,12 +4,32 @@
 @import 'styles/variables';
 @import 'styles/mixins';
 
-body {
+html,
+body,
+#root {
+  /**
+   * Scrolling is disabled on root
+   * since it's added to each page.
+   */
   margin: 0;
+  overflow: hidden;
+  -webkit-overflow-scrolling: auto;
+}
+
+body {
   color: $color_font_dark;
+  background-color: white;
   font-family: 'Roboto', sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+}
+
+img {
+  /**
+   * Prevents 'alt' text from being
+   * displayed when image is loading.
+   */
+  color: transparent;
 }
 
 h1 {

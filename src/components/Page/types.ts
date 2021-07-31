@@ -1,4 +1,4 @@
-export enum SectionType {
+export enum PageType {
   Trans = 'Transparent',
   Light = 'Light',
   Medm = 'Medm',

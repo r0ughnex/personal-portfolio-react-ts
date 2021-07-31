@@ -11,7 +11,6 @@ $section_h1_width_max: 470px;
 $section_p_width_max: 620px;
 
 .Section {
-  background-color: transparent;
   padding: $section_pad_v_mobile $section_pad_h_mobile;
 
   @include mobile-up {
@@ -42,6 +41,15 @@ $section_p_width_max: 620px;
 
   > p {
     max-width: $section_p_width_max;
+  }
+}
+
+.SectionTrans {
+  @extend .Section;
+  background-color: transparent;
+
+  & + & {
+    padding-top: 0;
   }
 }
 

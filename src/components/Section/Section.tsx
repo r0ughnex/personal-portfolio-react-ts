@@ -13,11 +13,11 @@ export interface SectionProps {
 function Section({ children, className, type }: SectionProps) {
   const sectionClassName = getSectionClassName(type);
 
-  const sectionElemProps = {
-    className: classNames(sectionClassName, className),
-  };
-
-  return <section {...sectionElemProps}>{children}</section>;
+  return (
+    <section className={classNames(sectionClassName, className)}>
+      {children}
+    </section>
+  );
 }
 
 export default Section;

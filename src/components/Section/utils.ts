@@ -16,7 +16,7 @@ export function getSectionClassName(type?: SectionType) {
     }
 
     default: {
-      return styles.Section;
+      return styles.SectionTrans;
     }
   }
 }
