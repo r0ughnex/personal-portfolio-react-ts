@@ -16,32 +16,6 @@ $section_p_width_max: 620px;
   @include mobile-up {
     padding: $section_pad_v_desktop $section_pad_h_desktop;
   }
-
-  > h1,
-  > p {
-    margin-left: auto;
-    margin-right: auto;
-
-    &:first-child {
-      margin-top: 0;
-    }
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  > h1 + p {
-    margin-top: 0;
-  }
-
-  > h1 {
-    max-width: $section_h1_width_max;
-  }
-
-  > p {
-    max-width: $section_p_width_max;
-  }
 }
 
 .SectionTrans {
@@ -83,4 +57,30 @@ $section_p_width_max: 620px;
   p {
     color: $color_font_light;
   }
+}
+
+.SectionTitle,
+.SectionText {
+  margin-left: auto;
+  margin-right: auto;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.SectionTitle {
+  max-width: $section_h1_width_max;
+}
+
+.SectionText {
+  max-width: $section_p_width_max;
+}
+
+.SectionTitle + .SectionText {
+  margin-top: 0;
 }
