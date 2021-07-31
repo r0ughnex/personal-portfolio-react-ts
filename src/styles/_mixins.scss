@@ -12,3 +12,15 @@
     @content;
   }
 }
+
+@mixin desktop-lg-up {
+  @media (min-width: #{$bp_width_desktop_lg}) {
+    @content;
+  }
+}
+
+@mixin desktop-xlg-up {
+  @media (min-width: #{$bp_width_desktop_xlg}) {
+    @content;
+  }
+}
