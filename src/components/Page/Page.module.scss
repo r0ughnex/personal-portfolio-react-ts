@@ -41,3 +41,12 @@ $page_height_content_min: 100vh;
   position: relative;
   min-height: $page_height_content_min;
 }
+
+.PageNoScroll {
+  overflow: hidden;
+  -webkit-overflow-scrolling: auto;
+
+  .PageContent {
+    height: 100% !important;
+  }
+}

@@ -1,28 +1,26 @@
+import classNames from 'classnames';
+
 import styles from './Page.module.scss';
 import { PageType } from './types';
 
-export function getPageClassName(type?: PageType) {
+export function getPageClassName(type?: PageType, hasScroll = true) {
+  const className = classNames({ [styles.PageNoScroll]: !hasScroll });
+
   switch (type) {
     case PageType.Light: {
-      return styles.PageLight;
+      return classNames(styles.PageLight, className);
     }
 
     case PageType.Medm: {
-      return styles.PageMedm;
+      return classNames(styles.PageMedm, className);
     }
 
     case PageType.Dark: {
-      return styles.PageDark;
+      return classNames(styles.PageDark, className);
     }
 
     default: {
-      return styles.PageTrans;
+      return classNames(styles.PageTrans, className);
     }
   }
-}
-
-/* Only exists so as to be able extend it's implementation. */
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function getContentClassName(type?: PageType) {
-  return styles.PageContent;
 }
