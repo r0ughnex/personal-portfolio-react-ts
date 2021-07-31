@@ -1,6 +1,22 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+$section_pad_h_mobile: 30px;
+$section_pad_v_mobile: 40px;
+
+$section_pad_h_desktop: 50px;
+$section_pad_v_desktop: 60px;
+
+$section_h1_width_max: 470px;
+$section_p_width_max: 620px;
+
 .Section {
-  padding: 50px;
   background-color: transparent;
+  padding: $section_pad_v_mobile $section_pad_h_mobile;
+
+  @include mobile-up {
+    padding: $section_pad_v_desktop $section_pad_h_desktop;
+  }
 
   > h1,
   > p {
@@ -16,16 +32,16 @@
     }
   }
 
+  > h1 + p {
+    margin-top: 0;
+  }
+
   > h1 {
-    max-width: 470px;
+    max-width: $section_h1_width_max;
   }
 
   > p {
-    max-width: 620px;
-  }
-
-  > h1 + p {
-    margin-top: 0;
+    max-width: $section_p_width_max;
   }
 }
 
@@ -40,7 +56,7 @@
 
 .SectionMedm {
   @extend .Section;
-  background-color: #f5f5f5;
+  background-color: $color_grey_light;
 
   & + & {
     padding-top: 0;
@@ -49,14 +65,14 @@
 
 .SectionDark {
   @extend .Section;
-  color: #fafafa;
-  background-color: #37474f;
+  color: $color_font_white;
+  background-color: $color_grey_dark;
 
   & + & {
     padding-top: 0;
   }
 
   p {
-    color: #e0e0e0;
+    color: $color_font_light;
   }
 }
