@@ -2,8 +2,8 @@ import classNames from 'classnames';
 import { ReactNode } from 'react';
 
 import styles from './Section.module.scss';
-import { SectionType } from './types';
-import { getSectionClassName } from './utils';
+import { SectionType, TitleType } from './types';
+import { getSectionClassName, getTitleClassName } from './utils';
 
 export interface SectionProps {
   children: ReactNode;
@@ -14,6 +14,7 @@ export interface SectionProps {
 export interface SectionTitleProps {
   children: ReactNode;
   className?: string;
+  type?: TitleType;
 }
 
 export interface SectionTextProps {
@@ -22,18 +23,18 @@ export interface SectionTextProps {
 }
 
 function Section({ children, className, type }: SectionProps) {
-  const sectionClassName = getSectionClassName(type);
-
   return (
-    <section className={classNames(sectionClassName, className)}>
+    <section className={classNames(getSectionClassName(type), className)}>
       {children}
     </section>
   );
 }
 
-function SectionTitle({ children, className }: SectionTitleProps) {
+function SectionTitle({ children, className, type }: SectionTitleProps) {
   return (
-    <h1 className={classNames(styles.SectionTitle, className)}>{children}</h1>
+    <h1 className={classNames(getTitleClassName(type), className)}>
+      {children}
+    </h1>
   );
 }
 

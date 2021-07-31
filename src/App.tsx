@@ -4,6 +4,7 @@ import Section, {
   SectionText,
   SectionTitle,
   SectionType,
+  TitleType,
 } from 'components/Section';
 
 import styles from './App.module.scss';
@@ -14,7 +15,9 @@ function App() {
       <main className={styles.App}>
         <Section type={SectionType.Light}>
           <Container>
-            <SectionTitle>Who I have worked&nbsp;with.</SectionTitle>
+            <SectionTitle type={TitleType.Primary}>
+              Who I have <span>worked</span>&nbsp;<span>with.</span>
+            </SectionTitle>
 
             <SectionText>
               I&apos;ve worked with a variety of clients, from smaller start-ups
@@ -26,7 +29,9 @@ function App() {
 
         <Section type={SectionType.Light}>
           <Container>
-            <SectionTitle>Who I have worked&nbsp;with.</SectionTitle>
+            <SectionTitle type={TitleType.Secondary}>
+              Who I have <span>worked</span>&nbsp;<span>with.</span>
+            </SectionTitle>
 
             <SectionText>
               I&apos;ve worked with a variety of clients, from smaller start-ups
@@ -38,7 +43,9 @@ function App() {
 
         <Section type={SectionType.Medm}>
           <Container>
-            <SectionTitle>Who I have worked&nbsp;with.</SectionTitle>
+            <SectionTitle type={TitleType.Primary}>
+              Who I have <span>worked</span>&nbsp;<span>with.</span>
+            </SectionTitle>
 
             <SectionText>
               I&apos;ve worked with a variety of clients, from smaller start-ups
@@ -50,7 +57,9 @@ function App() {
 
         <Section type={SectionType.Medm}>
           <Container>
-            <SectionTitle>Who I have worked&nbsp;with.</SectionTitle>
+            <SectionTitle type={TitleType.Secondary}>
+              Who I have <span>worked</span>&nbsp;<span>with.</span>
+            </SectionTitle>
 
             <SectionText>
               I&apos;ve worked with a variety of clients, from smaller start-ups
@@ -62,7 +71,9 @@ function App() {
 
         <Section type={SectionType.Dark}>
           <Container>
-            <SectionTitle>Who I have worked&nbsp;with.</SectionTitle>
+            <SectionTitle type={TitleType.Primary}>
+              Who I have <span>worked</span>&nbsp;<span>with.</span>
+            </SectionTitle>
 
             <SectionText>
               I&apos;ve worked with a variety of clients, from smaller start-ups
@@ -74,7 +85,9 @@ function App() {
 
         <Section type={SectionType.Dark}>
           <Container>
-            <SectionTitle>Who I have worked&nbsp;with.</SectionTitle>
+            <SectionTitle type={TitleType.Secondary}>
+              Who I have <span>worked</span>&nbsp;<span>with.</span>
+            </SectionTitle>
 
             <SectionText>
               I&apos;ve worked with a variety of clients, from smaller start-ups

@@ -77,10 +77,38 @@ $section_p_width_max: 620px;
   max-width: $section_h1_width_max;
 }
 
-.SectionText {
-  max-width: $section_p_width_max;
+.SectionTitleDefault {
+  @extend .SectionTitle;
+}
+
+.SectionTitlePrimary {
+  @extend .SectionTitle;
+
+  span:nth-of-type(odd) {
+    color: $color_primary;
+  }
+
+  span:nth-of-type(even) {
+    color: $color_secondary;
+  }
+}
+
+.SectionTitleSecondary {
+  @extend .SectionTitle;
+
+  span:nth-of-type(odd) {
+    color: $color_secondary;
+  }
+
+  span:nth-of-type(even) {
+    color: $color_primary;
+  }
 }
 
 .SectionTitle + .SectionText {
   margin-top: 0;
+}
+
+.SectionText {
+  max-width: $section_p_width_max;
 }

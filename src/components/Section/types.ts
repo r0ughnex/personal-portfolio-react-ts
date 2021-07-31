@@ -4,3 +4,9 @@ export enum SectionType {
   Medm = 'Medm',
   Dark = 'Dark',
 }
+
+export enum TitleType {
+  Default = 'Default',
+  Primary = 'Primary',
+  Secondary = 'Secondary',
+}
