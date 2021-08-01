@@ -1,0 +1,51 @@
+@import 'styles/mixins';
+@import 'styles/variables';
+@import 'components/Section/Section.module.scss';
+
+$heart_icon_width: 0.875em;
+$heart_icon_height: 0.875em;
+
+$face_icon_width_mobile: 98px;
+$face_icon_height_mobile: 138px;
+
+$face_icon_width_desktop: 110px;
+$face_icon_height_desktop: 156px;
+
+.IntroHero {
+  position: relative;
+  padding-bottom: ($section_pad_h_mobile * 2);
+
+  @include mobile-up {
+    padding-bottom: ($section_pad_h_desktop * 2);
+  }
+
+  .HeroTitle {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.FaceIcon {
+  width: $face_icon_width_mobile;
+  height: $face_icon_height_mobile;
+  margin-bottom: ($section_pad_h_mobile * 1);
+
+  @include mobile-up {
+    width: $face_icon_width_desktop;
+    height: $face_icon_height_desktop;
+    margin-bottom: ($section_pad_h_desktop * 1);
+  }
+}
+
+.HeartIcon {
+  display: inline-block;
+  vertical-align: middle;
+  width: $heart_icon_width;
+  height: $heart_icon_width;
+
+  svg {
+    display: block;
+    width: $heart_icon_width;
+    height: $heart_icon_width;
+  }
+}

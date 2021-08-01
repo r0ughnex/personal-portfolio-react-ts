@@ -1,5 +1,5 @@
-@import 'styles/variables';
 @import 'styles/mixins';
+@import 'styles/variables';
 
 $section_pad_h_mobile: 30px;
 $section_pad_v_mobile: 40px;
@@ -7,8 +7,11 @@ $section_pad_v_mobile: 40px;
 $section_pad_h_desktop: 50px;
 $section_pad_v_desktop: 60px;
 
-$section_h1_width_max: 470px;
-$section_p_width_max: 620px;
+$section_h1_width_max_mobile: 440px;
+$section_p_width_max_mobile: 560px;
+
+$section_h1_width_max_desktop: 500px;
+$section_p_width_max_desktop: 620px;
 
 .Section {
   padding: $section_pad_v_mobile $section_pad_h_mobile;
@@ -74,7 +77,11 @@ $section_p_width_max: 620px;
 }
 
 .SectionTitle {
-  max-width: $section_h1_width_max;
+  max-width: $section_h1_width_max_mobile;
+
+  @include mobile-up {
+    max-width: $section_h1_width_max_desktop;
+  }
 }
 
 .SectionTitleDefault {
@@ -110,5 +117,9 @@ $section_p_width_max: 620px;
 }
 
 .SectionText {
-  max-width: $section_p_width_max;
+  max-width: $section_p_width_max_mobile;
+
+  @include mobile-up {
+    max-width: $section_p_width_max_desktop;
+  }
 }
