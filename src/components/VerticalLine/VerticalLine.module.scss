@@ -1,0 +1,23 @@
+@import 'styles/mixins';
+@import 'styles/variables';
+
+$vertical_line_width: 2px;
+
+.VerticalLine {
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  background-color: $color_grey_dark;
+  width: $vertical_line_width;
+  height: 100%;
+}
+
+.VerticalLineTop {
+  @extend .VerticalLine;
+  top: 0;
+}
+
+.VerticalLineBottom {
+  @extend .VerticalLine;
+  bottom: 0;
+}

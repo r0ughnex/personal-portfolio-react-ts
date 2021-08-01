@@ -4,6 +4,7 @@ import Section, {
   SectionType,
   TitleType,
 } from 'components/Section';
+import VerticalLine, { LinePosition } from 'components/VerticalLine';
 
 import { ReactComponent as FaceIcon } from './face.svg';
 import { ReactComponent as HeartIcon } from './heart.svg';
@@ -24,6 +25,10 @@ function IntroHero() {
           &nbsp;to design and code great&nbsp;looking usable&nbsp;interfaces.
         </SectionTitle>
       </Container>
+      <VerticalLine
+        className={styles.VerticalLine}
+        position={LinePosition.Bottom}
+      />
     </Section>
   );
 }

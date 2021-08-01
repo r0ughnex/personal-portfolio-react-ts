@@ -28,12 +28,12 @@ $face_icon_height_desktop: 156px;
 .FaceIcon {
   width: $face_icon_width_mobile;
   height: $face_icon_height_mobile;
-  margin-bottom: ($section_pad_h_mobile * 1);
+  margin-bottom: $section_pad_h_mobile;
 
   @include mobile-up {
     width: $face_icon_width_desktop;
     height: $face_icon_height_desktop;
-    margin-bottom: ($section_pad_h_desktop * 1);
+    margin-bottom: $section_pad_h_desktop;
   }
 }
 
@@ -47,5 +47,15 @@ $face_icon_height_desktop: 156px;
     display: block;
     width: $heart_icon_width;
     height: $heart_icon_width;
+  }
+}
+
+.VerticalLine {
+  height: ($section_pad_h_mobile * 2);
+  margin-bottom: -$section_pad_h_mobile;
+
+  @include mobile-up {
+    height: ($section_pad_h_desktop * 2);
+    margin-bottom: -$section_pad_h_desktop;
   }
 }
