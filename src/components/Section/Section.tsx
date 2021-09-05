@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { ReactNode } from 'react';
+import { forwardRef, ReactNode } from 'react';
 
 import styles from './Section.module.scss';
 import { SectionType, TitleType } from './types';
@@ -22,27 +22,41 @@ export interface SectionTextProps {
   className?: string;
 }
 
-function Section({ children, className, type }: SectionProps) {
-  return (
-    <section className={classNames(getSectionClassName(type), className)}>
-      {children}
-    </section>
-  );
-}
+const Section = forwardRef<HTMLElement, SectionProps>(
+  ({ children, className, type }, ref) => {
+    return (
+      <section
+        className={classNames(getSectionClassName(type), className)}
+        ref={ref}
+      >
+        {children}
+      </section>
+    );
+  },
+);
 
-function SectionTitle({ children, className, type }: SectionTitleProps) {
-  return (
-    <h1 className={classNames(getTitleClassName(type), className)}>
-      {children}
-    </h1>
-  );
-}
+const SectionText = forwardRef<HTMLHeadingElement, SectionTextProps>(
+  ({ children, className }, ref) => {
+    return (
+      <p className={classNames(styles.SectionText, className)} ref={ref}>
+        {children}
+      </p>
+    );
+  },
+);
 
-function SectionText({ children, className }: SectionTextProps) {
-  return (
-    <p className={classNames(styles.SectionText, className)}>{children}</p>
-  );
-}
+const SectionTitle = forwardRef<HTMLHeadingElement, SectionTitleProps>(
+  ({ children, className, type }, ref) => {
+    return (
+      <h1 className={classNames(getTitleClassName(type), className)} ref={ref}>
+        {children}
+      </h1>
+    );
+  },
+);
 
-export default Section;
+Section.displayName = 'Section';
+SectionText.displayName = 'SectionText';
+SectionTitle.displayName = 'SectionTitle';
 export { SectionText, SectionTitle };
+export default Section;

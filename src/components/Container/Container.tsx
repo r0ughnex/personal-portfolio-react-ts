@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { ReactNode } from 'react';
+import { forwardRef, ReactNode } from 'react';
 
 import styles from './Container.module.scss';
 
@@ -8,10 +8,15 @@ export interface ContainerProps {
   className?: string;
 }
 
-function Container({ children, className }: ContainerProps) {
-  return (
-    <div className={classNames(styles.Container, className)}>{children}</div>
-  );
-}
+const Container = forwardRef<HTMLDivElement, ContainerProps>(
+  ({ children, className }, ref) => {
+    return (
+      <div className={classNames(styles.Container, className)} ref={ref}>
+        {children}
+      </div>
+    );
+  },
+);
 
+Container.displayName = 'Container';
 export default Container;
