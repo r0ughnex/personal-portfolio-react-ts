@@ -1,0 +1,11 @@
+@import 'styles/mixins';
+@import 'styles/variables';
+
+.Background3DWorld {
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}

@@ -6,6 +6,7 @@ import Section, {
 } from 'components/Section';
 import VerticalLine, { LinePosition } from 'components/VerticalLine';
 
+import Background3DWorld from './Background3DWorld';
 import { ReactComponent as FaceIcon } from './face.svg';
 import { ReactComponent as HeartIcon } from './heart.svg';
 import styles from './IntroHero.module.scss';
@@ -25,10 +26,13 @@ function IntroHero() {
           &nbsp;to design and code great&nbsp;looking usable&nbsp;interfaces.
         </SectionTitle>
       </Container>
+
       <VerticalLine
         className={styles.VerticalLine}
         position={LinePosition.Bottom}
       />
+
+      <Background3DWorld />
     </Section>
   );
 }

@@ -44,7 +44,7 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'no-console': ['warn', { allow: ['warn', 'error'] }],
-    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-unused-vars': 'warn',
     'import/no-named-as-default-member': 'off',
     'no-only-tests/no-only-tests': 'error',
     'simple-import-sort/imports': 'error',
