@@ -202,13 +202,11 @@ function Background3DWorld() {
       });
     };
 
-    // Callback function to handle element resize changes.
+    // Callback function to handle the root element's resize.
     const resizeObserver = new ResizeObserver(elements => {
-      for (const elem of elements) {
-        const rect = elem.contentRect;
-        setHeight(rect.height);
-        setWidth(rect.width);
-      }
+      const rect = elements[0]?.contentRect;
+      setHeight(rect.height);
+      setWidth(rect.width);
     });
 
     // @TODO: Restructure listeners so as they can be removed as well.
