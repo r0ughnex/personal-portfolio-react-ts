@@ -1,3 +1,6 @@
+import { hexColorStrToNumber } from 'styles/mixins';
+import { Color } from 'styles/variables';
+
 export const CAMERA_SETTINGS = {
   INITIAL: { X: 0, Y: 0, Z: 500 },
   FAR: 10000,
@@ -6,14 +9,14 @@ export const CAMERA_SETTINGS = {
 };
 
 export const RENDERER_SETTINGS = {
-  CLEAR_COLOR: 0xffffff,
+  CLEAR_COLOR: hexColorStrToNumber(Color.White),
   ANTI_ALIAS: true,
   ALPHA: true,
 };
 
 export const SCENE_SETTINGS = {
+  FOG_COLOR: hexColorStrToNumber(Color.GreyLight),
   FOG_DENSITY: 0.002,
-  FOG_COLOR: 0xf5f5f5,
 };
 
 export const CONTROL_SETTINGS = {
@@ -24,15 +27,15 @@ export const CONTROL_SETTINGS = {
 };
 
 export const GEOMETRY_SETTINGS = {
-  MATERIAL_COLOR: 0xffffff,
+  MATERIAL_COLOR: hexColorStrToNumber(Color.White),
   FLAT_SHADING: true,
   RADIUS: 3,
   COUNT: 50,
 };
 
 export const LIGHTING_SETTINGS = {
-  COLOR_LIGHT: 0xffffff,
-  COLOR_DARK: 0x212121,
+  COLOR_LIGHT: hexColorStrToNumber(Color.White),
+  COLOR_DARK: hexColorStrToNumber(Color.GreyDark),
   INTENSITY: 0.3,
 };
 

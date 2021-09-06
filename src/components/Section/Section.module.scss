@@ -51,7 +51,7 @@ $section_p_width_max_desktop: 620px;
 .SectionDark {
   @extend .Section;
   color: $color_font_white;
-  background-color: $color_grey_dark;
+  background-color: $color_grey_night;
 
   & + & {
     padding-top: 0;

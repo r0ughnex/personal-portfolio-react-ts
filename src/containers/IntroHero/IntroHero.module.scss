@@ -12,7 +12,11 @@ $face_icon_width_desktop: 110px;
 $face_icon_height_desktop: 156px;
 
 .IntroHero {
+  display: flex;
+  min-height: 100vh;
   position: relative;
+  align-items: center;
+  justify-content: center;
   padding-bottom: ($section_pad_h_mobile * 2);
 
   @include mobile-up {
